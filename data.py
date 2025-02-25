@@ -15,7 +15,7 @@ class Versenyzo:
         self.futas=adatok[9]
         self.osszido=self.idoatalkit(self.uszas)+self.idoatalkit(self.elso_depo)+self.idoatalkit(self.kerekpar)+self.idoatalkit(self.masodik_depo)+self.idoatalkit(self.futas)
 
-    def idoatalkit(ido:str)->int:
+    def idoatalkit(self,ido:str)->int:
         ido_adatok=ido.split(':')
         return int(ido_adatok[0])*3600+int(ido_adatok[1])*60+int(ido_adatok[2])
 
