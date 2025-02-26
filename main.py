@@ -16,7 +16,7 @@ bekert_kategoria=input('5. feladat: Kérek egy kategóriát: ')
 rajtszam_lista=kateg_db2(bekert_kategoria)
 
 if len(rajtszam_lista)==0:
-    print('\tRajtszám(ok): Nincs ilyen kategória!',end='')
+    print('\tRajtszám(ok): Nincs ilyen kategória!')
 else:
     print('\tRajtszám(ok): ', end='')
     print(*rajtszam_lista,sep=' ')
