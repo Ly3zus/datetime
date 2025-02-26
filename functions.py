@@ -1,4 +1,5 @@
 from data import *
+import math
 
 def beolvas(faljnev:str)->None:
     f=open(faljnev,'r',encoding='utf8')
@@ -25,3 +26,13 @@ def atlag_eletkor()->float:
     for v in versenyzok:
         osszeg+=2014-v.szuletesi_ev
     return osszeg/len(versenyzok)
+
+def gyoztes(nem:str)->Versenyzo:
+    gyoztes_ideje=math.inf
+    gyoztes_versenyzo=None
+    for v in versenyzok:
+        if v.neme==nem and v.osszido<gyoztes_ideje:
+            gyoztes_ideje=v.osszido
+            gyoztes_versenyzo=v
+    return gyoztes_versenyzo
+
